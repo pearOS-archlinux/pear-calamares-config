@@ -1,0 +1,33 @@
+# Created by Alexandru Balan
+---
+componentName:  pear
+
+# Should the welcome image (productWelcome, below) be scaled
+# up beyond its natural size?
+welcomeExpandingLogo:   true
+
+strings:
+    productName:         pearOS NiceC0re
+    shortProductName:    pearOS
+    version:             22.02 NiceC0re
+    shortVersion:        22.02
+    versionedName:       pearOS NiceC0re
+    shortVersionedName:  pearOS 1.0
+    bootloaderEntryName: pearOS NiceC0re
+    productUrl:          https://nicec0re.pearos.xyz
+    supportUrl:          https://forum.pearos.xyz
+    knownIssuesUrl:      https://bugs.pearos.xyz
+    releaseNotesUrl:     https://news.pearos.xyz
+
+images:
+    productLogo:         "nicec0re.png"
+    productIcon:         "nicec0re.png"
+    productWelcome:      "languages.png"
+
+slideshow:               "show.qml"
+slideshowAPI:            1
+
+style:
+   sidebarBackground:    "#bdc3c7"
+   sidebarText:          "#1F1F1F"
+   sidebarTextSelect:    "#3498DB"
