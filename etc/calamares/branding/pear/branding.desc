@@ -8,7 +8,7 @@
 # Additional styling can be done using the stylesheet.qss
 # file, also in the branding directory.
 ---
-componentName:  archlinuxgui
+componentName:  pear
 
 
 ### WELCOME / OVERALL WORDING
@@ -39,7 +39,7 @@ welcomeExpandingLogo:   true
 #  - "normal" or unset, expand as needed, use *windowSize*
 #  - "fullscreen", start as large as possible, ignore *windowSize*
 #  - "noexpand", don't expand automatically, use *windowSize*
-windowExpanding:    normal
+windowExpanding:    fullscreen
 
 # Size of Calamares window, expressed as w,h. Both w and h
 # may be either pixels (suffix px) or font-units (suffix em).
@@ -78,7 +78,7 @@ windowPlacement: center
 # to putting the sidebar on the left. Also valid is "qml,top".
 # While "widget,top" is valid, the widgets code is **not** flexible
 # and results will be terrible.
-sidebar: widget
+sidebar: widget,bottom
 
 # Kind of navigation (button panel on the bottom).
 #  - "widget" or unset, use traditional navigation
@@ -121,13 +121,13 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         Arch Linux
-    shortProductName:    Arch Linux
-    version:             2024-03
+    productName:         pearOS NiceC0re
+    shortProductName:    pearOS NiceC0re
+    version:             26.3
     #shortVersion:        
-    versionedName:       Arch Linux 
-    shortVersionedName:  Arch Linux
-    bootloaderEntryName: Arch Linux
+    versionedName:       pearOS 
+    shortVersionedName:  pearOS
+    bootloaderEntryName: pearOS NiceC0re
     #productUrl:          https://calamares.io/
     #supportUrl:          https://github.com/calamares/calamares/wiki
     #knownIssuesUrl:      https://github.com/calamares/calamares/issues

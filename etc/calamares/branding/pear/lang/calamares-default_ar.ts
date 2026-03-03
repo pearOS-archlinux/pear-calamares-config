@@ -14,4 +14,15 @@
         <translation>عرض الثالث</translation>
     </message>
 </context>
+<context>
+    <name>ShellProcess</name>
+    <message>
+        <source>Install type (Offline / Netinstall)</source>
+        <translation>نوع التثبيت (غير متصل / تثبيت الشبكة)</translation>
+    </message>
+    <message>
+        <source>Installing additional packages (netinstall)</source>
+        <translation>تثبيت حزم إضافية (تثبيت الشبكة)</translation>
+    </message>
+</context>
 </TS>

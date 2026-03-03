@@ -14,4 +14,15 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>ShellProcess</name>
+    <message>
+        <source>Install type (Offline / Netinstall)</source>
+        <translation>Install type (Offline / Netinstall)</translation>
+    </message>
+    <message>
+        <source>Installing additional packages (netinstall)</source>
+        <translation>Installing additional packages (netinstall)</translation>
+    </message>
+</context>
 </TS>
