@@ -174,3 +174,28 @@ QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
     background-color: #3A4248;
     border-radius: 4px;
 }
+
+/* Text general – prevenim text negru pe fundal închis */
+QLabel,
+QCheckBox,
+QRadioButton,
+QGroupBox,
+QTreeView,
+QListView,
+QTableView,
+QHeaderView::section {
+    color: #FFFFFF;
+}
+
+/* Texte dezactivate – gri deschis */
+QLabel:disabled,
+QCheckBox:disabled,
+QRadioButton:disabled {
+    color: #777777;
+}
+
+/* Link-uri / text clicabil în stil macOS blue */
+QLabel:link,
+QLabel:visited {
+    color: #0A84FF;
+}
