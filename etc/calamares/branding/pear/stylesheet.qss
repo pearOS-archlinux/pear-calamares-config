@@ -95,44 +95,82 @@ QPushButton#aboutButton { qproperty-icon: url(:/data/images/release.svg); }
 #licenseItemFullText {  }
 */
 
-/* ALG Calamares Theme */
+/* ALG Calamares Theme – Dark Mode */
 
-
-
-/* ALG Cala Theme */
-
-
-/* # BUTTONS GENERAL */
-#debugButton {
-	background-color: #31363b;
-	font: 10px;
-	color: #ffffff;
-	height: 32px;
-    padding: 5px;
-	border: none;
+/* Fereastra principală în dark */
+#mainApp {
+    background-color: #101317;
+    color: #FFFFFF;
 }
 
-#debugButton:pressed {
-	color: #00aeff;
+/* Sidebar clasic (dacă este folosit) */
+#sidebarApp {
+    background-color: #181D22;
+    color: #FFFFFF;
 }
 
-#debugButton:hover {
-	color: #00aeff;
+/* Logo container */
+#logoApp {
+    background-color: transparent;
 }
 
+/* Butoane generale – dark, cu accent albastru */
+QPushButton {
+    background-color: #222831;
+    color: #FFFFFF;
+    font: 10px;
+    padding: 5px 10px;
+    border: 1px solid #3A4248;
+    border-radius: 3px;
+}
+
+QPushButton:hover {
+    border-color: #00AEFF;
+    color: #00AEFF;
+}
+
+QPushButton:pressed {
+    background-color: #11151B;
+    border-color: #00AEFF;
+}
+
+/* Butoane speciale din bara de sus (Debug / About) – integrate cu restul */
+#debugButton,
 #aboutButton {
-	background-color: #31363b;
-	font: 10px;
-	color: #ffffff;
-	height: 32px;
-    padding: 5px;
-	border: none;
+    background-color: #222831;
+    color: #FFFFFF;
+    border: 1px solid #3A4248;
+    height: 28px;
 }
 
-#aboutButton:pressed {
-	color: #00aeff;
-}
-
+#debugButton:hover,
 #aboutButton:hover {
-	color: #00aeff;
+    color: #00AEFF;
+    border-color: #00AEFF;
+}
+
+#debugButton:pressed,
+#aboutButton:pressed {
+    background-color: #11151B;
+}
+
+/* ComboBox, liste etc. în dark */
+QComboBox, QLineEdit, QTextEdit, QSpinBox, QDoubleSpinBox, QPlainTextEdit {
+    background-color: #181D22;
+    color: #FFFFFF;
+    border: 1px solid #3A4248;
+}
+
+QComboBox:hover, QLineEdit:hover, QTextEdit:hover, QSpinBox:hover, QDoubleSpinBox:hover, QPlainTextEdit:hover {
+    border-color: #00AEFF;
+}
+
+/* Scrollbars discrete în dark */
+QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #101317;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: #3A4248;
+    border-radius: 4px;
 }
