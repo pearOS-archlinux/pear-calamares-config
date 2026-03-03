@@ -14,15 +14,4 @@
         <translation>La troisième affice ce trouve ici.</translation>
     </message>
 </context>
-<context>
-    <name>ShellProcess</name>
-    <message>
-        <source>Install type (Offline / Netinstall)</source>
-        <translation>Type d'installation (Hors ligne / Netinstall)</translation>
-    </message>
-    <message>
-        <source>Installing additional packages (netinstall)</source>
-        <translation>Installation de paquets supplémentaires (netinstall)</translation>
-    </message>
-</context>
 </TS>

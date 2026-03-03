@@ -8,7 +8,7 @@
 # Additional styling can be done using the stylesheet.qss
 # file, also in the branding directory.
 ---
-componentName:  pear
+componentName:  arkalinuxgui
 
 
 ### WELCOME / OVERALL WORDING
@@ -39,7 +39,7 @@ welcomeExpandingLogo:   true
 #  - "normal" or unset, expand as needed, use *windowSize*
 #  - "fullscreen", start as large as possible, ignore *windowSize*
 #  - "noexpand", don't expand automatically, use *windowSize*
-windowExpanding:    fullscreen
+windowExpanding:    normal
 
 # Size of Calamares window, expressed as w,h. Both w and h
 # may be either pixels (suffix px) or font-units (suffix em).
@@ -78,7 +78,7 @@ windowPlacement: center
 # to putting the sidebar on the left. Also valid is "qml,top".
 # While "widget,top" is valid, the widgets code is **not** flexible
 # and results will be terrible.
-sidebar: qml,bottom
+sidebar: widget
 
 # Kind of navigation (button panel on the bottom).
 #  - "widget" or unset, use traditional navigation
@@ -121,13 +121,13 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         pearOS NiceC0re
-    shortProductName:    pearOS NiceC0re
-    version:             26.3
+    productName:         ALG
+    shortProductName:    ALG
+    version:             2024-03
     #shortVersion:        
-    versionedName:       pearOS 
-    shortVersionedName:  pearOS
-    bootloaderEntryName: pearOS NiceC0re
+    versionedName:       ALG
+    shortVersionedName:  ALG
+    bootloaderEntryName: ALG
     #productUrl:          https://calamares.io/
     #supportUrl:          https://github.com/calamares/calamares/wiki
     #knownIssuesUrl:      https://github.com/calamares/calamares/issues
@@ -183,7 +183,8 @@ style:
    SidebarBackground:        "#292F34"
    SidebarText:              "#FFFFFF"
    SidebarTextCurrent:       "#292F34"
-   SidebarBackgroundCurrent: "#00CED1"
+   SidebarBackgroundCurrent: "#ff8243"
+
 
 ### SLIDESHOW
 #

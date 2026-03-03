@@ -14,15 +14,4 @@
         <translation>Dit is het derde Dia element.</translation>
     </message>
 </context>
-<context>
-    <name>ShellProcess</name>
-    <message>
-        <source>Install type (Offline / Netinstall)</source>
-        <translation>Installatietype (Offline / Netinstall)</translation>
-    </message>
-    <message>
-        <source>Installing additional packages (netinstall)</source>
-        <translation>Extra pakketten installeren (netinstall)</translation>
-    </message>
-</context>
 </TS>
