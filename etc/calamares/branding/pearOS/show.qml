@@ -8,7 +8,7 @@
  *
  */
 
-import QtQuick 2.0;
+import QtQuick 2.15;
 import calamares.slideshow 1.0;
 
 Presentation
@@ -22,21 +22,19 @@ Presentation
 
     Timer {
         id: advanceTimer
-        interval: 10000
+        interval: 30000
         running: presentation.activatedInCalamares
         repeat: true
         onTriggered: nextSlide()
     }
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background1
-            source: "Slide1.jpg"
+            source: "slide1.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -45,15 +43,13 @@ Presentation
         }
     }
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background2
-            source: "Slide2.jpg"
+            source: "slide2.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -63,15 +59,13 @@ Presentation
     }
 
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background3
-            source: "Slide3.jpg"
+            source: "slide3.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -80,15 +74,13 @@ Presentation
         }
     }
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background4
-            source: "Slide4.jpg"
+            source: "slide4.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -97,15 +89,13 @@ Presentation
         }
     }
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background5
-            source: "Slide5.jpg"
+            source: "slide5.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -114,15 +104,13 @@ Presentation
         }
     }
 
-    Slide
-    {
+    Slide {
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
 
-        Image
-        {
+        Image {
             id: background6
-            source: "Slide6.jpg"
+            source: "slide6.png"
             width: parent.width; height: parent.height
             horizontalAlignment: Image.AlignCenter
             verticalAlignment: Image.AlignTop
@@ -130,74 +118,6 @@ Presentation
             anchors.fill: parent
         }
     }
-
-    //Slide
-    //{
-        //anchors.fill: parent
-        //anchors.verticalCenterOffset: 0
-
-        //Image
-        //{
-            //id: background7
-            //source: "Slide7.jpg"
-            //width: parent.width; height: parent.height
-            //horizontalAlignment: Image.AlignCenter
-            //verticalAlignment: Image.AlignTop
-            //fillMode: Image.Stretch
-            //anchors.fill: parent
-        //}
-    //}
-
-    //Slide
-    //{
-        //anchors.fill: parent
-        //anchors.verticalCenterOffset: 0
-
-        //Image
-        //{
-            //id: background8
-            //source: "Slide8.jpg"
-            //width: parent.width; height: parent.height
-            //horizontalAlignment: Image.AlignCenter
-            //verticalAlignment: Image.AlignTop
-            //fillMode: Image.Stretch
-            //anchors.fill: parent
-        //}
-    //}
-
-    //Slide
-    //{
-        //anchors.fill: parent
-        //anchors.verticalCenterOffset: 0
-
-        //Image
-        //{
-            //id: background9
-            //source: "Slide9.jpg"
-            //width: parent.width; height: parent.height
-            //horizontalAlignment: Image.AlignCenter
-            //verticalAlignment: Image.AlignTop
-            //fillMode: Image.Stretch
-            //anchors.fill: parent
-        //}
-    //}
-
-        //Slide
-    //{
-        //anchors.fill: parent
-        //anchors.verticalCenterOffset: 0
-
-        //Image
-        //{
-            //id: background10
-            //source: "Slide10.jpg"
-            //width: parent.width; height: parent.height
-            //horizontalAlignment: Image.AlignCenter
-            //verticalAlignment: Image.AlignTop
-            //fillMode: Image.Stretch
-            //anchors.fill: parent
-        //}
-    //}
 
 
     // When this slideshow is loaded as a V1 slideshow, only
@@ -214,5 +134,4 @@ Presentation
     function onLeave() {
         console.log("QML Component (default slideshow) deactivated");
     }
-
 }
