@@ -15,18 +15,7 @@ Presentation
 {
     id: presentation
 
-    function nextSlide() {
-        console.log("QML Component (default slideshow) Next slide");
-        presentation.goToNextSlide();
-    }
-
-    Timer {
-        id: advanceTimer
-        interval: 30000
-        running: presentation.activatedInCalamares
-        repeat: true
-        onTriggered: nextSlide()
-    }
+    // Single static slide; no auto-advance needed.
 
     Slide {
         anchors.fill: parent
@@ -43,83 +32,6 @@ Presentation
         }
     }
 
-    Slide {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background2
-            source: "slide2.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
-        }
-    }
-
-
-    Slide {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background3
-            source: "slide3.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
-        }
-    }
-
-    Slide {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background4
-            source: "slide4.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
-        }
-    }
-
-    Slide {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background5
-            source: "slide5.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
-        }
-    }
-
-    Slide {
-        anchors.fill: parent
-        anchors.verticalCenterOffset: 0
-
-        Image {
-            id: background6
-            source: "slide6.png"
-            width: parent.width; height: parent.height
-            horizontalAlignment: Image.AlignCenter
-            verticalAlignment: Image.AlignTop
-            fillMode: Image.Stretch
-            anchors.fill: parent
-        }
-    }
-
-
     // When this slideshow is loaded as a V1 slideshow, only
     // activatedInCalamares is set, which starts the timer (see above).
     //
@@ -127,11 +39,11 @@ Presentation
     // These example functions log a message (and re-start the slides
     // from the first).
     function onActivate() {
-        console.log("QML Component (default slideshow) activated");
+        //console.log("QML Component (default slideshow) activated");
         presentation.currentSlide = 0;
     }
 
-    function onLeave() {
-        console.log("QML Component (default slideshow) deactivated");
-    }
+    //function onLeave() {
+        //console.log("QML Component (default slideshow) deactivated");
+   // }
 }
