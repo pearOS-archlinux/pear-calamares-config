@@ -25,3 +25,8 @@
   # arch-chroot /mnt usermod -aG sudo default
   sed -i 's/# %wheel ALL=(ALL) ALL$/%wheel ALL=(ALL) ALL/' /mnt/etc/sudoers
   echo "default ALL=(ALL) NOPASSWD:ALL" >> /mnt/etc/sudoers
+
+    # Enabling auto-login for 'default' user :
+  echo "[Autologin]" > /mnt/etc/sddm.conf
+  echo "User=default" >> /mnt/etc/sddm.conf
+  echo "Session=plasma.desktop" >> /mnt/etc/sddm.conf
