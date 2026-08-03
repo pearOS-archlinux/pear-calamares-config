@@ -123,8 +123,8 @@ navigation: widget
 strings:
     productName:         pearOS NiceC0re
     shortProductName:    pearOS
-    version:             26.03
-    shortVersion:        26.3
+    version:             26.08
+    shortVersion:        26.8
     versionedName:       pearOS
     shortVersionedName:  pearOS
     bootloaderEntryName: pearOS NiceC0re
