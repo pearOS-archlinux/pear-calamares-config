@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+#
+# Runs inside the target chroot. Installs the GPU/network driver profile that
+# matches the real hardware, via chwd.
+#
+# The ISO only carries the *open* NVIDIA modules (Turing and newer). Anything
+# older -- Kepler, Maxwell, Pascal, Volta -- needs the 470xx or 580xx branch,
+# which is pulled from the CachyOS repository here, at install time.
+#
+
+set -u
+
+echo "### chwd: detecting hardware"
+
+# chwd's 580xx profile emits ${kernel}-headers itself, but the 470xx profile
+# does not, so a Kepler card would install nvidia-470xx-dkms with nothing to
+# build against. Pre-install the headers whenever an NVIDIA GPU is present;
+# that covers 470xx without relying on the profile to ask.
+if lspci -d '10de:*:030x' -n 2>/dev/null | grep -q .; then
+    echo "### chwd: NVIDIA GPU present, ensuring DKMS build prerequisites"
+    for pkgbase in /usr/lib/modules/*/pkgbase; do
+        [ -e "$pkgbase" ] || continue
+        kernel="$(cat "$pkgbase")"
+        pacman -S --needed --noconfirm "${kernel}-headers" || true
+    done
+    pacman -S --needed --noconfirm dkms || true
+fi
+
+chwd --autoconfigure || echo "### chwd: autoconfigure reported an error, continuing"
+
+# chwd's pre_install writes /etc/mkinitcpio.conf.d/10-chwd*.conf (adds the nvidia
+# modules, drops the kms hook). Calamares' own initcpio module already ran long
+# before this point, so regenerate explicitly rather than relying on a pacman
+# hook having fired.
+echo "### chwd: regenerating initramfs"
+mkinitcpio -P || true
+
+echo "### chwd: done"
+exit 0
