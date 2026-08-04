@@ -26,7 +26,7 @@ if lspci -d '10de:*:030x' -n 2>/dev/null | grep -q .; then
     pacman -S --needed --noconfirm dkms || true
 fi
 
-chwd --autoconfigure || echo "### chwd: autoconfigure reported an error, continuing"
+chwd -a -f || echo "### chwd: autoconfigure reported an error, continuing"
 
 # chwd's pre_install writes /etc/mkinitcpio.conf.d/10-chwd*.conf (adds the nvidia
 # modules, drops the kms hook). Calamares' own initcpio module already ran long
